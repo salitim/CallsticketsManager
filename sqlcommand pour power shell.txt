@@ -1,0 +1,8 @@
+//connexion à la bdd : mysql -h localhost -p -u utilisateur_mysql nom_base_de_donnees
+//ATTENTION SOUS LINUX LES SLASHS SONT INVERSES
+LOAD DATA LOCAL INFILE 'C:/Users/EXTSLIT/Documents/tickets_appels_201202/tickets_appels_201202v2.csv'
+INTO TABLE ticketsappels
+COLUMNS TERMINATED BY ';'
+OPTIONALLY ENCLOSED BY '"'
+ESCAPED BY '"'
+LINES TERMINATED BY '\n'
