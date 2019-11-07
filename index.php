@@ -29,7 +29,7 @@ function totalSms($nature)
 var_dump(totalSms('envoi de sms depuis le mobile'). ' sms');
 
 /**
- * durée des appels réel
+ * durée des appels volume réel
  * @return string
  */
 function dureeAppelReel()
@@ -50,7 +50,7 @@ function dureeAppelReel()
 var_dump(dureeAppelReel() . ' heures');
 
 /**
- * TOp 10 des facture réels
+ * TOp 10 des factures volume réel
  * @return array
  */
 function top10FactureReel()
