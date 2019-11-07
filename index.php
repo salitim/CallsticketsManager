@@ -37,15 +37,14 @@ function dureeAppelReel()
     $pdo = getPdo();
     $query = $pdo->query("SELECT volumereel FROM ticketsappels WHERE jour >= 2012-02-15");
     $volumesReel = $query->fetchAll();
-    $minutes = 0;
+    $hours = 0;
     foreach ($volumesReel as $VolumeReel) {
-        list($hour, $minute) = implode(':', $VolumeReel);
-        $minutes += $hour * 60;
-        $minutes += $minute;
+   
+        $hours += intval($VolumeReel);
+        
     }
-    $hours = floor($minutes / 60);
-    $minutes -= $hours * 60;
-    return sprintf('%02d:%02d', $hours, $minutes);
+ 
+    return $hours;
 }
 
 var_dump(dureeAppelReel() . ' heures');
